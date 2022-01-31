@@ -1,1 +1,18 @@
-Teste
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+
+
+
+
+
+browser = webdriver.Chrome()
+
+
+paginainicial = 'https://www1c.siscomex.receita.fazenda.gov.br/siscomexImpweb-7/private_siscomeximpweb_inicio.do'
+impressaodi = 'https://www1c.siscomex.receita.fazenda.gov.br/importacaoweb-7/ExtratoDIMenu.do'
+
+
+browser.get(paginainicial)
+browser.get(impressaodi)
+browser.find_element_by_xpath('//*[@id="nrDeclaracao"]').send_keys('2201964563',Keys.RETURN)
